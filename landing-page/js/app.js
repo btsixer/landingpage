@@ -55,19 +55,19 @@ function makeActive() {
   for (const section of sections) {
     const box = section.getBoundingClientRect();
     // You can play with the values in the "if" condition to further make it more accurate.
-    if (box.top <= 150 && box.bottom >= 150) {
+    if (box.top <= 80 && box.bottom >= 80) {
       // Apply active state on the current section and the corresponding Nav link.
       const id = section.getAttribute("id");
-      document.querySelector(`.${id}`).classList.add("active");
+      document.querySelector(`#${id}`).classList.add("active");
       section.classList.add("your-active-class");
     } else {
       // Remove active state from other section and corresponding Nav link.
       const id = section.getAttribute("id");
-      document.querySelector(`.${id}`).classList.remove("active");
+      document.querySelector(`#${id}`).classList.remove("active");
       section.classList.remove("your-active-class");
     }
   }
 }
 
 // listen for scroll events and call makeActive function
-// window.addEventListener("scroll", makeActive);
+window.addEventListener("scroll", makeActive);
