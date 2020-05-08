@@ -1,0 +1,13 @@
+const sectionLocation = document.querySelectorAll('section');
+^^ stores the following in the variable:
+   <section id="section1" data-nav="Section 1" class="your-active-class">
+
+1. Write a for loop that finds the "id" and "data-nav" values
+and builds a node "li" element followed by the href below:
+
+** End would add this to the <ul> element **
+       <li>
+           <a href="#section1">Section 1</a>
+           <a href="#section2">Section 2</a>
+           <a href="#section3">Section 3</a>
+       </li>
